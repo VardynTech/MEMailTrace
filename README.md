@@ -25,6 +25,7 @@ MEMailTrace reads those raw logs for you.
 - **Tells you which EHLO was refused, and by what.** Tick **Only EHLO refused** to list every connection MailEnable refused at EHLO/HELO. Each row shows the EHLO name the sender used and the entry of your *EHLO strings to block* list that caught it (read from the registry, read only). **Summary** groups the refused names and the busiest IPs.
 - **Finds one message precisely.** Fill in **From**, **To** and **Find** together: the search returns whole messages, one row each, where every box you filled matches.
 - **Traces one mail.** Select a row and click **Trace mail** (or double-click). One report with the Message ID, IP, EHLO name, the account it logged in as, sender, subject, recipients, the SMTP transaction, the MTA, filter and debug log lines of that Message ID, the outbound copies MailEnable made of it, and a **RESULT** line on top. **Copy text** puts it on the clipboard.
+- **Wildcards.** `*` and `?` work in Find, From and To. Use `47.236.*.*` to find a whole IP range.
 - **Sorts.** Date and time columns; click any header to sort.
 - **Exports** the results to CSV or text.
 
