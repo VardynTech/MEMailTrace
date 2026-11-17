@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.2
+
+- **Right-click menu** on the results: Trace this mail, search this IP, its range (`a.b.c.*`) or its HELO / EHLO name, copy the IP or the log line.
+- A mail that was accepted and then dropped by a MailEnable filter now reads **REJECTED by filter** (it was "deleted by filter"), with a note that a spam or blacklist link check can reject the same sender some times and not others.
+
 ## v1.1
 
 - **IP ranges in Find:** `47.236.*.*`, `47.236.1.*` or `47.*.*.*` finds every connection from that range. The pattern matches whole addresses only, so `47.236.*.*` never matches `147.236.1.1`. `*` and `?` still work as wildcards in any text.

@@ -2,7 +2,7 @@
 
 **Find what MailEnable's own Message Route Trace cannot show - and get the whole story of one mail in a single text you can paste to your client.**
 
-MEMailTrace searches the raw MailEnable SMTP, POP and IMAP logs, including the connections that never became a message: refused at EHLO/HELO, failed logins, quits without sending anything. For a mail that did arrive it builds one combined trace - the SMTP transaction, the MTA and filter log lines, and a plain result: refused, accepted, deleted by a filter, relayed.
+MEMailTrace searches the raw MailEnable SMTP, POP and IMAP logs, including the connections that never became a message: refused at EHLO/HELO, failed logins, quits without sending anything. For a mail that did arrive it builds one combined trace - the SMTP transaction, the MTA and filter log lines, and a plain result: refused, accepted, rejected by a filter, relayed.
 
 Free for everyone running MailEnable. No licence key, no install, no cloud account, no telemetry. It only reads your logs.
 
@@ -37,7 +37,7 @@ MEMailTrace reads those raw logs for you.
 |---|---|
 | REFUSED - EHLO block | the connection was refused at EHLO/HELO (550 Policy violation); shows the EHLO name and the block-list entry that matched |
 | REFUSED - login failed | 535 Invalid Username or Password |
-| ACCEPTED, THEN DELETED BY FILTER | the server said 250, then the MTA log shows a filter deleting the message (the filter's name is shown) |
+| ACCEPTED, THEN REJECTED BY FILTER | the server said 250, then the MTA log shows a filter rejecting the message (the filter's name is shown) |
 | ACCEPTED | the server said 250; the trace states which mailbox and folder it was delivered to, where it was forwarded, and which remote server accepted each relayed copy |
 | NOT RECEIVED | the sending server closed the connection before the message was complete |
 | REJECTED | every recipient was refused |
